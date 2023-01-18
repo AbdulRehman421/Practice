@@ -17,7 +17,7 @@ function App() {
   console.log(state)
   return (
     <div className="App">
-      {state}
+      {state} <br />
       <button onClick={() => dispatch({ type: 'add' })}>add</button>
       <button onClick={() => dispatch({ type: 'sub' })}>sub</button>
 
