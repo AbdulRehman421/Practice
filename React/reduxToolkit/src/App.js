@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   const dispatch = useDispatch();
-  const Value = useSelector((state) => state.counter)
+  const Value = useSelector((state) => state.countersss)
   console.log(Value);
   return (
     <div className="App">
