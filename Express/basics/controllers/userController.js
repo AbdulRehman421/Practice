@@ -15,17 +15,17 @@ const addUser = (request, response) => {
 const createUser = async (request, response) => {
     try {
         const { name, email, password, isAdmin } = request.body;
-        const user = await UserModel.create({ name, email, password });
-        response.staus(201).json({
+        const user = await UserModel.create({ name, email, password, isAdmin });
+        response.status(201).json({
+            message: 'Welcome',
             user,
-            message: 'Welcome'
-        })
-        response.json({
-            success: true,
-            msg: `Welcome ${username}`
         })
     } catch (error) {
         console.log(`error creating user ${error.message}`)
+        response.status(400).json({
+            message: 'error creating user',
+            error,
+        })
     }
 
 }
