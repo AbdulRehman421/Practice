@@ -7,7 +7,7 @@ const ImageSlider = () => {
     return (<>
         <div>ImageSlider</div>
         <Swiper
-            slidesPerView={1}
+            slidesPerView={2}
             spaceBetween={30}
             loop={true}
             pagination={{
